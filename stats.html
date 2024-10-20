@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .stats-container {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            position: relative;
+            width: 400px; /* Fixed width for stats container */
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ccc; /* Placeholder for avatar */
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .emotions {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .emotion {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e1e1e1;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .emotion:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        .status-bar {
+            background-color: #e1e1e1;
+            border-radius: 5px;
+            height: 20px;
+            margin-top: 10px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .status {
+            background-color: #4caf50; /* Green status */
+            height: 100%;
+            width: 70%; /* Example width */
+            transition: width 0.3s; /* Smooth transition */
+        }
+
+        .label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 15px;
+            background-color: #f4b186; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: brown;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <h1>Your Pet's Stats</h1>
+        <div class="avatar">
+            <!-- Placeholder for avatar image -->
+            <img src="dog.jpg" alt="Pet Avatar" style="width: 100%; border-radius: 50%;">
+        </div>
+        <div class="emotions">
+            <div class="emotion" title="Sleepy">😴</div>
+            <div class="emotion" title="Sad">😢</div>
+            <div class="emotion" title="Playful">😭</div>
+            <div class="emotion" title="Happy">😊</div>
+            
+            
+        </div>
+        <div class="status-bar">
+            <div class="status"></div>
+        </div>
+        <div class="label">Happiness Level</div>
+    </div>
+    <a href="index.html" class="button">Go back to home</a>
+</body>
+</html>

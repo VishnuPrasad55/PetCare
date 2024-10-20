@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Pet Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .menu-container {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex; /* Use flexbox */
+            justify-content: space-around; /* Space items evenly */
+            align-items: flex-start; /* Align items to the top */
+            flex-wrap: nowrap; /* Prevent wrapping to keep items in a single row */
+            width: 100%; /* Full width for the menu */
+        }
+
+        .menu-item {
+            width: 150px; /* Fixed width for each item */
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Clip content */
+            background-color: #fff; /* White background for items */
+            padding: 10px; /* Padding inside items */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+            margin: 10px; /* Add margin to space items */
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+        }
+
+        .menu-item img {
+            width: 100%; /* Full width of item */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            transition: transform 0.3s; /* Transition for image */
+        }
+
+        .menu-item img:hover {
+            transform: rotate(5deg); /* Slight rotation effect on hover */
+        }
+
+        .menu-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 15px;
+            background-color: brown; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: black; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Select Your Pet's Food</h1>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="f1.jpg" alt="Kibble">
+                <p>Kibble</p>
+            </div>
+            <div class="menu-item">
+                <img src="f2.jpg" alt="Treats">
+                <p>Treats</p>
+            </div>
+            <div class="menu-item">
+                <img src="f3.jpg" alt="Wet Food">
+                <p>Wet Food</p>
+            </div>
+            <div class="menu-item">
+                <img src="f4.jpg" alt="Dry Food">
+                <p>Dry Food</p>
+            </div>
+            <div class="menu-item">
+                <img src="f5.jpg" alt="Fish">
+                <p>Fish</p>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="button">Go back to home</a>
+</body>
+</html>

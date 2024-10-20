@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Your Pet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .chat-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 400px; /* Fixed width for chat container */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chat-box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            height: 200px; /* Fixed height for chat area */
+            overflow-y: auto; /* Enable scrolling */
+            padding: 10px;
+            margin-bottom: 15px;
+            background: #fafafa; /* Light background for chat box */
+        }
+
+        .message {
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .user-message {
+            background: #d1e7dd; /* User message background */
+            text-align: right;
+        }
+
+        .pet-message {
+            background: #f8d7da; /* Pet message background */
+            text-align: left;
+        }
+
+        .input-area {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-area input {
+            width: 70%; /* Width for text input */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px; /* Space between input and button */
+        }
+
+        .emoji-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .emoji-buttons button {
+            background: transparent;
+            border: none;
+            font-size: 24px; /* Larger emoji size */
+            cursor: pointer;
+            margin: 0 5px; /* Space between emoji buttons */
+            transition: transform 0.2s;
+        }
+
+        .emoji-buttons button:hover {
+            transform: scale(1.2); /* Slightly enlarge on hover */
+        }
+
+        .button1 {
+            padding: 10px 15px;
+            background-color: #f4b186; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button1:hover {
+            background-color: brown; /* Darker shade on hover */
+        }
+
+        .button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 15px;
+            background-color: #f4b186; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: brown;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat with Your Pet</h1>
+        <div class="chat-box" id="chatBox">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button class="button1" onclick="sendMessage()">Send</button>
+        </div>
+        <div class="emoji-buttons">
+            <button onclick="addEmoji('🐶')">🐶</button>
+            <button onclick="addEmoji('😻')">😻</button>
+            <button onclick="addEmoji('🍖')">🍖</button>
+            <button onclick="addEmoji('🎾')">🎾</button>
+            <button onclick="addEmoji('❤️')">❤️</button>
+        </div>
+    </div>
+    <a href="index.html" class="button">Go back to home</a>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const chatBox = document.getElementById('chatBox');
+
+            if (input.value.trim() !== "") {
+                const userMessage = document.createElement('div');
+                userMessage.className = 'message user-message';
+                userMessage.textContent = input.value;
+                chatBox.appendChild(userMessage);
+
+                // Simulate pet response
+                setTimeout(() => {
+                    const petMessage = document.createElement('div');
+                    petMessage.className = 'message pet-message';
+                    petMessage.textContent = "🐾 I'm here for you!";
+                    chatBox.appendChild(petMessage);
+                    chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to bottom
+                }, 1000);
+                
+                input.value = ""; // Clear input field
+                chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to bottom
+            }
+        }
+
+        function addEmoji(emoji) {
+            const input = document.getElementById('userInput');
+            input.value += emoji; // Append emoji to input
+            input.focus(); // Keep focus on input
+        }
+    </script>
+</body>
+</html>

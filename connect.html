@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Pet Owners</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .connect-container {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px; /* Fixed width for connect container */
+        }
+
+        .connection {
+            margin: 10px 0; /* Space between connections */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            background: #f9f9f9;
+        }
+
+        .connection:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+
+        .connect-button {
+            padding: 15px;
+            background-color: #f4b186; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px; /* Space above button */
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%; /* Full width button */
+        }
+
+        .connect-button:hover {
+            background-color: brown; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 15px;
+            background-color: #f4b186; /* Back to home button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: brown; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="connect-container">
+        <h1>Connect with Pet Owners</h1>
+
+        <div class="connection"> 
+            <h3>Jane Doe</h3>
+            <p>Owner of a playful Golden Retriever.</p>
+            <button class="connect-button" onclick="connectUser('Jane Doe')">Connect</button>
+        </div>
+
+        <div class="connection"> 
+            <h3>John Smith</h3>
+            <p>Owner of two mischievous cats.</p>
+            <button class="connect-button" onclick="connectUser('John Smith')">Connect</button>
+        </div>
+
+        <div class="connection"> 
+            <h3>Emily Johnson</h3>
+            <p>Owner of a friendly Beagle.</p>
+            <button class="connect-button" onclick="connectUser('Emily Johnson')">Connect</button>
+        </div>
+
+        <a href="index.html" class="button">Go back to home</a>
+    </div>
+
+    <script>
+        function connectUser(userName) {
+            alert("You have connected with " + userName + "!");
+            // Replace with actual connection logic (e.g., adding to friend list)
+        }
+    </script>
+</body>
+</html>

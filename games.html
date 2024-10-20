@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .games-container {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px; /* Fixed width for games container */
+        }
+
+        .game {
+            margin: 15px 0; /* Space between game sections */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .game:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+
+        .game img {
+            width: 100%; /* Full width of the game box */
+            border-radius: 10px;
+        }
+
+        .game-button {
+            padding: 15px;
+            background-color: #f4b186; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Space between button and image */
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%; /* Full width buttons */
+        }
+
+        .game-button:hover {
+            background-color: #f4b186; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .button {
+            margin-top: 20px; /* Space above the button */
+            padding: 10px 15px;
+            background-color: #f4b186; /* Back to home button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: brown; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="games-container">
+        <h1>Pet Games</h1>
+
+        <div class="game">
+            <img src="g2.jpg" alt="Play Fetch">
+            <h2>Play Fetch</h2>
+            <button class="game-button" onclick="startGame1()">Start Game</button>
+        </div>
+
+        <div class="game">
+            <img src="g1.jpg" alt="Pet Puzzle">
+            <h2>Pet Puzzle</h2>
+            <button class="game-button" onclick="startGame2()">Start Game</button>
+        </div>
+
+        <a href="index.html" class="button">Go back to home</a>
+    </div>
+
+    <script>
+        function startGame1() {
+            alert("Starting Fetch Game!"); // Replace with actual game logic
+        }
+
+        function startGame2() {
+            alert("Starting Pet Puzzle!"); // Replace with actual game logic
+        }
+    </script>
+</body>
+</html>
